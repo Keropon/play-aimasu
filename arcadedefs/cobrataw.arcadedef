@@ -1,0 +1,44 @@
+{
+	"id": "cobrataw",
+	"name": "Cobra: The Arcade (World)",
+	"driver": "sys246",
+	"dongle":
+	{
+		"name": "NM00021 CBR2, Ver.B a026081331195a.bin"
+	},
+	"hdd":
+	{
+		"name": "cbr1-ha.chd"
+	},
+	"buttons":
+	{
+		"3": "circle"
+	},
+	"inputMode": "lightgun",
+	"screenPosXform": [ -65535, 0, 65535, 0 ],
+	"eeFrequencyScale": [4, 3],
+	"boot": "ac0:CBRLOAD",
+	"patches":
+	[
+		{
+			"address": "0x001003CC",
+			"value": "0x0805DDB0",
+			"description": "Wait for Vblank after signaling Vblank sema"
+		},
+		{
+			"address": "0x002ECE74",
+			"value": "0x0",
+			"description": "Skip card detection"
+		},
+		{
+			"address": "0x002ECF18",
+			"value": "0x0",
+			"description": "Skip card detection"
+		},
+		{
+			"address": "0x002ECF58",
+			"value": "0x1840002E",
+			"description": "Skip card detection"
+		}
+	]
+}
